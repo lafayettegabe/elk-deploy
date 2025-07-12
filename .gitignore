@@ -1,0 +1,7 @@
+
+elk
+elk.pub
+
+.terraform
+.terraform.*
+terraform.tfvars
