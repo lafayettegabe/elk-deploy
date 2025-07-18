@@ -34,6 +34,7 @@ module "alb" {
   domain_names = {
     monitoring = local.monitoring_url
     apm        = local.apm_url
+    search     = local.search_url
   }
   certificate_arn = var.acm_certificate_arn
   common_tags     = local.common_tags
@@ -44,6 +45,7 @@ module "dns" {
   zone_id      = data.aws_route53_zone.selected.zone_id
   monitoring   = local.monitoring_url
   apm          = local.apm_url
+  search       = local.search_url
   alb_dns_name = module.alb.lb_dns_name
   alb_zone_id  = module.alb.lb_zone_id
 }

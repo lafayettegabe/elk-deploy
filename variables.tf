@@ -23,6 +23,11 @@ variable "apm_subdomain" {
   type        = string
 }
 
+variable "search_subdomain" {
+  description = "Subdomain for Elastic Search (e.g. search)"
+  type        = string
+}
+
 variable "discord_webhook_url" {
   description = "Discord webhook URL for ELK notifications"
   type        = string

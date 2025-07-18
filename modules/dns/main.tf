@@ -19,3 +19,14 @@ resource "aws_route53_record" "apm" {
     evaluate_target_health = true
   }
 }
+
+resource "aws_route53_record" "search" {
+  zone_id = var.zone_id
+  name    = var.search
+  type    = "A"
+  alias {
+    name                   = var.alb_dns_name
+    zone_id                = var.alb_zone_id
+    evaluate_target_health = true
+  }
+}

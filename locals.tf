@@ -5,6 +5,7 @@ locals {
 
   monitoring_url = "${var.monitoring_subdomain}.${var.domain_name}"
   apm_url        = "${var.apm_subdomain}.${var.domain_name}"
+  search_url     = "${var.search_subdomain}.${var.domain_name}"
 
   common_tags = {
     Project   = local.project
